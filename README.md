@@ -80,19 +80,3 @@ frontend/src/
 | GET | /api/requests/shelter | shelter | requests for my pets |
 | PUT | /api/requests/:id/status | shelter | approve or reject |
 
-## Syllabus mapping (for viva / report)
-| Syllabus unit | Where it is used in this project |
-|---------------|----------------------------------|
-| Full stack intro, APIs, HTTP methods, JSON | `routes/` files, JSON in every request and response |
-| React setup, components, JSX, props | `frontend/` (Vite), `components/PetCard.jsx` (props), `PetImage.jsx` (reuse) |
-| State with useState, reusability | all pages and forms, `PetImage` used in 4 places |
-| Forms, input controls, events, validation | `Login`, `Register`, `AdoptionForm`, `PetForm` |
-| Express, routing, REST (GET/POST/PUT/DELETE) | `server.js`, `routes/petRoutes.js`, `routes/requestRoutes.js` |
-| MongoDB + Mongoose (CRUD) | `models/`, `config/db.js`, all routes |
-| Fetch/Axios integration | `frontend/src/api.js` and every page |
-| JWT authentication (extra) | `middleware/auth.js`, `context/AuthContext.jsx` |
-
-## Common problems
-- "MongoDB connection failed": start MongoDB service or fix `MONGO_URI` in `backend/.env`
-- Pets not loading: make sure backend is running on port 5000
-- Backend port changed? Update `baseURL` in `frontend/src/api.js`
